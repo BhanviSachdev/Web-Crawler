@@ -21,7 +21,7 @@ def main():
     
     flag = sys.argv[1]
 
-    corpus = read("utf-16")
+    corpus = read()
 
     if (flag == "-n"):
         print("------------------------------------------------")
@@ -83,7 +83,7 @@ def read():
     """
     pages = dict()
 
-    with open("OUTPUT/pagerank.csv", "r") as csv_file:
+    with open("OUTPUT/pagerank.csv", "r",encoding=("ISO-8859-1"),low-memory=False)as csv_file:
         csv_reader = csv.reader(csv_file)
         for row in csv_reader:
             pages[row[0]] = set(
