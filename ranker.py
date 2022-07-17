@@ -17,7 +17,7 @@ python pagerank.py -ip --> pagerank with iteration will be executed
 
 def main():
     if len(sys.argv) != 2:
-        sys.exit("Usage: python ranker.py [FLAG]")
+        sys.exit("Usage: python ranker.py [FLAG],encoding='unicode_escape' ")
     
     flag = sys.argv[1]
 
