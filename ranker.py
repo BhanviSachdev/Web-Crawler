@@ -21,7 +21,7 @@ def main():
     
     flag = sys.argv[1]
 
-    corpus = read(encoding=('ISO-8859-1'),low_memory=False)
+    corpus = read("utf-16")
 
     if (flag == "-n"):
         print("------------------------------------------------")
