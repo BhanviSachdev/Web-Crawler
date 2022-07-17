@@ -83,7 +83,7 @@ def read():
     """
     pages = dict()
 
-    with open("OUTPUT/pagerank.csv", "r",encoding=("ISO-8859-1"),low-memory=False)as csv_file:
+    with open("OUTPUT/pagerank.csv", "r",encoding="ISO-8859-1",sep=';')as csv_file:
         csv_reader = csv.reader(csv_file)
         for row in csv_reader:
             pages[row[0]] = set(
