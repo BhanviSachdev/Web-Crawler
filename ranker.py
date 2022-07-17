@@ -84,7 +84,7 @@ def read():
     pages = dict()
 
     with open("OUTPUT/pagerank.csv", "r") as csv_file:
-        csv_reader = csv.reader(csv_file)
+        csv_reader = csv.reader(csv_file,encoding='unicode_escape')
         for row in csv_reader:
             pages[row[0]] = set(
                 x for x in row[1:]
