@@ -3,6 +3,7 @@ import random
 import re
 import sys
 import csv
+encoding='unicode_escape'
 
 DAMPING = 0.85
 SAMPLES = 10000
