@@ -3,7 +3,7 @@ import random
 import re
 import sys
 import csv
-encoding='unicode_escape'
+
 
 DAMPING = 0.85
 SAMPLES = 10000
@@ -17,7 +17,7 @@ python pagerank.py -ip --> pagerank with iteration will be executed
 
 def main():
     if len(sys.argv) != 2:
-        sys.exit("Usage: python ranker.py [FLAG],encoding='unicode_escape' ")
+        sys.exit("Usage: python ranker.py [FLAG] ")
     
     flag = sys.argv[1]
 
@@ -84,7 +84,7 @@ def read():
     pages = dict()
 
     with open("OUTPUT/pagerank.csv", "r") as csv_file:
-        csv_reader = csv.reader(csv_file,encoding='unicode_escape')
+        csv_reader = csv.reader(csv_file)
         for row in csv_reader:
             pages[row[0]] = set(
                 x for x in row[1:]
